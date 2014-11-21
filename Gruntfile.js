@@ -34,9 +34,16 @@ module.exports = function (grunt) {
         files: ['bower.json'],
         tasks: ['wiredep']
       },
+      jade: {
+          files: ['<%= config.app %>/{,*/}*.jade'],
+          tasks: ['jade'],
+          options: {
+            livereload: true
+          }
+      },
       js: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
-        tasks: ['jshint'],
+        //tasks: ['jshint'],
         options: {
           livereload: true
         }
@@ -194,7 +201,10 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         ignorePath: /^\/|\.\.\//,
-        src: ['<%= config.app %>/index.html']
+        src: [
+                '<%= config.app %>/*.html',
+                '<%= config.app %>/{,*/}*.jade',
+              ]
       },
       sass: {
         src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
@@ -371,6 +381,21 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+
+    jade: {
+        dist: {
+            options: {
+                pretty: true
+            },
+            files: [{
+                expand: true,
+                cwd: '<%= config.app %>',
+                dest: '.tmp',
+                src: '*.jade',
+                ext: '.html'
+            }]
+        }
     }
   });
 
@@ -387,6 +412,7 @@ module.exports = function (grunt) {
       'clean:server',
       'wiredep',
       'concurrent:server',
+      'jade',
       'autoprefixer',
       'connect:livereload',
       'watch'
@@ -418,6 +444,7 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
+    'jade',
     'autoprefixer',
     'concat',
     'cssmin',

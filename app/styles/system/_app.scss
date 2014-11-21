@@ -1,0 +1,14 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	font-size: $fs;
+}
+
+body {
+	font-family: 'geometria';
+	font-weight: 400;
+	color: #5e533e;
+}

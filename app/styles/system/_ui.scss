@@ -1,0 +1,30 @@
+h1 {
+  font-size: 60px;
+  color: rgb(94, 83, 61);
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 60px 0 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: color .5s $default-ease;
+}
+
+.brd-link {
+  border-bottom: 1px solid;
+
+  &:hover {
+    color: #34b8ce;
+  }
+}
+
+.us-title {
+  font-size: 40px;
+  color: rgb(94, 83, 62);
+  line-height: 1.2;
+  font-weight: 300;
+  margin: 25px 0;
+}

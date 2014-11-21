@@ -1,0 +1,15 @@
+.footer {
+	height: $menu-height;
+	line-height: $menu-height;
+	background: #5e5341;
+	color: #fff;
+  	font-size: 14px;
+
+  	span {
+  		margin-right: 40px;
+
+  		&:last-child {
+  			margin-right: 0;
+  		}
+  	}
+}

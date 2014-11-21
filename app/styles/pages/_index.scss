@@ -1,0 +1,78 @@
+.index-block {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-top: $menu-height;
+
+	.slider, .title {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.title {
+		z-index: 2;
+		color: #fff;
+
+		.wrapper {
+			height: 100%;
+		}
+
+		.main-text {
+			position: absolute;
+  			font-size: 44em / $fs;
+  			font-weight: 300;
+  			color: rgb(255, 255, 255);
+  			line-height: 1.4;
+  			text-transform: uppercase;
+  			top: 50%;
+  			width: 100%;
+  			margin-top: -100px;
+  			text-align: center;
+		}
+
+		.subs {
+			position: absolute;
+			bottom: 0;
+			top: 50%;
+			margin: 80px 0 0;
+			width: 100%;
+
+			&:before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 0;
+				height: 100%;
+			}
+
+			.subs-cont {
+				display: inline-block;
+				vertical-align: middle;
+				width: 100%;
+				margin-right: -4px;
+			}
+
+			.sub-text {
+				margin: 0 0 70px 50%;
+				margin-bottom: 9vh;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				.date {
+					display: inline-block;
+					vertical-align: top;
+					font-size: 12em / $fs;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}

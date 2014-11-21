@@ -1,0 +1,71 @@
+.wrapper, .container {
+	position: relative;
+	max-width: 1280px;
+	min-width: 1024px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.wrapper {
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+.grid_1,
+.grid_2,
+.grid_3 {
+	float: left;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+
+.grid_1 {
+	width: 25%;
+}
+
+.grid_2 {
+	width: 50%;
+}
+
+.grid_3 {
+	width: 75%;
+}
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix {
+  zoom: 1;
+}
