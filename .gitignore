@@ -1,3 +1,5 @@
-/bootstrap/compiled.php
-.env.*.php
-.env.php
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
