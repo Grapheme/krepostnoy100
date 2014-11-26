@@ -1,0 +1,55 @@
+.loc-benefits {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+
+	li {
+		display: inline-block;
+		vertical-align: top;
+		width: 33.3333%;
+		font-size: 12px;
+		text-transform: uppercase;
+		margin-top: 35px;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 50px;
+			height: 35px;
+			background-position: left center;
+			background-repeat: no-repeat;
+		}
+
+		&.ben-mus:before {
+			background-image: url(../images/location/mus.svg);
+			background-size: 40px 28px;
+		}
+		&.ben-fitnes:before {
+			background-image: url(../images/location/fitnes.svg);
+			background-size: 40px 16px;
+		}
+		&.ben-parks:before {
+			background-image: url(../images/location/parks.svg);
+			background-size: 40px 34px;
+		}
+		&.ben-child:before {
+			background-image: url(../images/location/child.svg);
+			background-size: 29px 32px;
+		}
+		&.ben-shop:before {
+			background-image: url(../images/location/shop.svg);
+			background-size: 31px 28px;
+		}
+		&.ben-rest:before {
+			background-image: url(../images/location/rest.svg);
+			background-size: 33px 27px;
+		}
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}

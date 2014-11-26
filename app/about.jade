@@ -12,7 +12,12 @@ block content
         .us-title Фасады
         .block-text.
           Архитектура здания выполнена в стиле «фьюжн» и сочетает в себе классические мотивы исторического центра Ростова-на-Дону с современным элегантным дизайном. В основу концепции положено совмещение различных высококачественных материалов, таких как кирпич ручной формовки и система вентилируемого фасада.
-      .grid_3.us-slider
+      .grid_3.us-slider.js-slider-cont
+        .slider-controls.js-controls
+          a.c-arrow.c-left <
+          div.numbers-cont
+            ul.numbers
+          a.c-arrow.c-right >
         .js-us-slider
           each i in [1,2,3,4,5,6,7,8,9,10,11,12]
             img(alt="" src="images/sliders/facades/#{i}.jpg")
@@ -23,7 +28,7 @@ block content
       .us-title Приемущества дома
       ul.benefits
         li
-          .benefit-icon
+          div(style="background-image: url(../images/benefits/panel.svg);").benefit-icon
           .title Технологии
           .text.
             Качественная отделка подъездов.
@@ -31,12 +36,12 @@ block content
             Многоярусный и наземный паркинги для жильцов комплекса с возможностью 
         
         li
-          .benefit-icon
+          div(style="background-image: url(../images/benefits/shar.svg);").benefit-icon
           .title МЕСТОПОЛОЖЕНИЕ
           .text.
             Пешеходная улица, развитая инфраструктура, отсутствие загруженных транспортных магистралей – вот главное в месторасположении нового жилого комплекса. Все необходимое находится в радиусе 500м. Это позволит вам больше времени посвятить семье, отдыху, друзьям. 
         li
-          .benefit-icon
+          div(style="background-image: url(../images/benefits/kapitel.svg);").benefit-icon
           .title КАЧЕСТВЕННАЯ ОТДЕЛКА
           .text.
             Качественная отделка подъездов.
@@ -45,7 +50,7 @@ block content
             Многоярусный и наземный паркинги для жильцов комплекса с возможностью. 
         
         li
-          .benefit-icon
+          div(style="background-image: url(../images/benefits/car.svg);").benefit-icon
           .title ПАРКОВКА
           .text.
             Каждый желающий может купить машиноместо в подземном паркинге. Все въезды и выезды будут осуществляются по пропускам, что послужит гарантией целостности и сохранности вашего автомобиля.
@@ -64,11 +69,42 @@ block content
             <li>спортивную зону;
             <li>рекреационную зону.
           </ul>
-      .grid_3.us-slider
+      .grid_3.us-slider.js-slider-cont
+        .slider-controls.js-controls
+          a.c-arrow.c-left <
+          div.numbers-cont
+            ul.numbers
+          a.c-arrow.c-right >
         .js-us-slider
           each i in [1,2,3,4,5,6]
             img(alt="" src="images/sliders/structure/#{i}.jpg")
       .clearfix
+
+  .us-block
+    .wrapper
+      .us-title Этапы строительства
+      .episodes.js-eSlider
+        .percents-block
+          ul.sections.js-eSections
+            each i in [1,2,3,4,5,6,7,8,9,10]
+              li
+          .desc Готовность - <span class="js-ePerc"></span>%
+        .episodes-slider
+          .top-desc
+            span Начало строиcтельства - сентябрь 2014
+            span.fl-r Окончание строительства - март 2016 года
+          ul.photos.js-ePhotos
+            //- each i in [1,2,3,4,5,6,7]
+            //-   li(style="background-image: url(images/tmp/episode-thumb.jpg)").past-episode
+            //- li(style="background-image: url(images/tmp/episode-thumb.jpg)").past-episode.active
+            //- each i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+            //-   li.future-episode
+
+          .episodes-line
+            .episode-info.js-eInfo
+              .title 
+              .text <span></span> фото
+        .clearfix
 
   .slider-block
     .container
@@ -77,9 +113,67 @@ block content
         .block-text.
           <p>На первом этаже располагается общий холл, оборудованный охранным постом. Все общественные зоны выполняются с применением высококачественных отделочных материалов.</p>
           <p>В здании используется лифт класса люкс испанской фирмы IMEM c отделкой деревом, а так же высококлассная централизованная система очистки воды и система видеонаблюдения.</p>
-      .grid_3.us-slider
+      .grid_3.us-slider.js-slider-cont
+        .slider-controls.js-controls
+          a.c-arrow.c-left <
+          div.numbers-cont
+            ul.numbers
+          a.c-arrow.c-right >
         .js-us-slider
           each i in [1,2,3,4,5,6,7,8]
             img(alt="" src="images/sliders/hall/#{i}.jpg")
       .clearfix
+
+  .us-block
+    .container
+      .grid_2
+        .us-title Документация
+        ul.documents-ul
+          li
+            a(href="#") Разрешение на строиcтельство.
+            span JPG, 659 KB
+          li
+            a(href="#") Свидетельство права на землю.
+            span JPG, 659 KB
+          li
+            a(href="#") Проектная декларация.
+            span PDF, 115 КВ
+          li
+            a(href="#") Договор долевого участия (образец).
+            span PDF, 110 KB
+          li
+            a(href="#") Свидетельство о государственной регистрации юридического лица.
+            span JPG, 81 KB
+      .grid_2
+        .building-block
+          ul.floors
+            each i in [10,9,8,7,6,5,4,3,2]
+              li #{i}
+            li.floors-text Этажи
+          .building
+            img(src="images/about/building.svg")
+            ul.floors-blocks
+              each i in [10,9,8,7,6,5,4,3,2]
+                li(class="#{i==9 ? 'active' : ''}").floor-item
+                  .left-part
+                  .right-part
+          ul.saled
+            each i in [10,9,8,7,6,5,4,3,2]
+              li #{i==9 ? 'продан!' : ''}&nbsp;
+
+    .clearfix
+
+  .overlay
+    div(data-popup="episode-photos").popup
+      .js-popups-close.popup-close
+        span
+      .us-slider.js-slider-cont.ajax-fotorama
+        .slider-controls.js-controls
+          a.c-arrow.c-left <
+          div.numbers-cont
+            ul.numbers
+          a.c-arrow.c-right >
+        div(data-height="100%" data-fit="contain" data-maxheight="100%").js-us-slider
+
+          
   

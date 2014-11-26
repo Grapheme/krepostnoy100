@@ -1,0 +1,40 @@
+extends ./layout.jade
+
+block vars
+  - var bodyClass = "location";
+
+block content
+  .wrapper
+    h1 Расположение
+  .slider-block
+    .container
+      .grid_1
+        .block-text.
+          Пешеходная улица, развитая инфраструктура, отсутствие загруженных транспортных магистралей – вот главное в месторасположении нового жилого комплекса. На территории в радиусе пешеходной доступности находится множество культурных, образовательных, медицинских, административно-офисных учреждений, а так же торгово- развлекательных комплексов, кафе, ресторанов и фитнесс центров.
+      .grid_3.us-slider.js-slider-cont
+        .slider-controls.js-controls
+          a.c-arrow.c-left <
+          div.numbers-cont
+            ul.numbers
+          a.c-arrow.c-right >
+        .js-us-slider
+          each i in [1,2,3,4,5,6,7,8,9]
+            img(alt="" src="images/sliders/location/#{i}.jpg")
+      .clearfix
+
+  .us-block
+    .container
+      .grid_1 &nbsp;
+      .grid_3
+        ul.loc-benefits
+          li.ben-mus <span>Музеи</span>
+          li.ben-parks <span>Парки, Скверы</span>
+          li.ben-child <span>Детям</span>
+          li.ben-fitnes <span>Фитнес-Клуб</span>
+          li.ben-rest <span>Рестораны, кафе</span>
+          li.ben-shop <span>Покупки </span>
+      .clearfix     
+
+  .map-benefits
+          
+  

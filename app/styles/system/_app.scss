@@ -12,3 +12,56 @@ body {
 	font-weight: 400;
 	color: #5e533e;
 }
+
+.overlay {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+	background: #5e5340;
+	z-index: 999;
+	display: none;
+
+	.popup {
+		display: none;
+	}
+
+	.popup-close {
+		position: absolute;
+		width: 35px;
+		height: 35px;
+		right: 26px;
+		top: 23px;
+		z-index: 2;
+
+		span {
+			display: inline-block;
+			vertical-align: top;
+			position: absolute;
+			height: 3px;
+			width: 100%;
+			left: 0;
+			top: 50%;
+			margin-top: -1.5px;
+
+			&:before, &:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: #fff;
+			}
+
+			&:before {
+				transform: rotate(-45deg);
+			}
+
+			&:after {
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

@@ -3,13 +3,69 @@
 	height: 590px;
 	margin-top: 60px;
 
-	.us-slider {
-		position: relative;
-		height: 100%;
-	}
-
 	.block-text {
 		width: 95%;
+	}
+}
+
+.us-slider {
+	position: relative;
+	height: 100%;
+
+	.slider-controls {
+		position: absolute;
+		bottom: 50px;
+		z-index: 1;
+		text-align: center;
+		color: #fff;
+		width: 100%;
+
+		.c-arrow {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.numbers-cont {
+			display: inline-block;
+			vertical-align: top;
+			overflow: hidden;
+		}
+
+		.numbers {
+			display: inline-block;
+			vertical-align: top;
+			white-space: nowrap;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			transition: transform .5s ease;
+			
+			li {
+				display: inline-block;
+				vertical-align: top;
+				width: 29px;
+				height: 29px;
+				line-height: 29px;
+				font-size: 20rem / $fs;
+				font-weight: 500;
+				border: 2px solid transparent;
+				cursor: pointer;
+
+				&.active {
+					border-color: #fff;
+					cursor: default;
+
+					&:hover {
+						border-color: $blue-hover;
+					}
+				}
+
+				&:hover {
+					color: $blue-hover;
+				}
+			}
+		}
 	}
 }
 
@@ -42,7 +98,7 @@
 }
 
 .benefits {
-	margin: 0;
+	margin: 60px 0 0;
 	padding: 0;
 	list-style: 0;
 	font-size: 0;
@@ -80,4 +136,290 @@
 
 .us-block {
 	margin: 40px 0 60px;
+}
+
+.building-block {
+	width: 460px;
+	margin-top: 90px;
+
+	.floors {
+		display: inline-block;
+		vertical-align: top;
+		list-style: none;
+		padding: 0;
+		margin: 79px 20px 0 0;
+		line-height: 51px;
+		font-size: 24px;
+		font-weight: 500;
+		text-align: center;
+
+		.floors-text {
+			margin-top: 25px;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+
+	.building {
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		width: 242px;
+		height: 610px;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 242px;
+		}
+
+		.floors-blocks {
+			position: absolute;
+			top: 0;
+			left: 6px;
+			right: 0;
+			bottom: 0;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			.floor-item {
+				position: absolute;
+
+				.left-part, .right-part {
+					position: absolute;
+					height: 50px;
+					background: rgba(114, 93, 74, .2);
+				}
+
+				.left-part {
+					top: 0;
+					width: 73px;
+				}
+
+				.right-part {
+					left: 73px;
+					top: 10px;
+					width: 160px;
+				}
+
+				&:nth-of-type(1) { top: 78px; }
+				&:nth-of-type(2) { top: 130px; }
+				&:nth-of-type(3) { top: 182px; }
+				&:nth-of-type(4) { top: 234px; }
+				&:nth-of-type(5) { top: 286px; }
+				&:nth-of-type(6) { top: 338px; }
+				&:nth-of-type(7) { top: 390px; }
+				&:nth-of-type(8) { top: 442px; }
+				&:nth-of-type(9) { top: 494px; }
+
+				&:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(8),&:nth-of-type(9) {
+					.right-part {
+						width: 152px;
+					}
+				}
+
+				&:nth-of-type(9) {
+					.left-part {
+						height: 53px;
+					}
+					.right-part {
+						height: 44px;
+					}
+				}
+
+				&:hover, &.active {
+					.left-part, .right-part {
+						background: rgba(51, 186, 204, .5);
+					}
+				}
+			}
+		}
+	}
+
+	.saled {
+		display: inline-block;
+		vertical-align: top;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		line-height: 51px;
+		margin: 87px 0 0 13px;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+}
+
+$episode-step: 13px;
+.episodes {
+	.percents-block {
+		display: inline-block;
+		vertical-align: top;
+		width: 165px;
+		text-align: center;
+
+		.sections {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			height: 150px;
+			width: 55px;
+
+			li {
+				position: absolute;
+				height: 45px;
+				width: 55px;
+				background-image: url(../images/about/section.svg);
+				background-size: 100% auto;
+				background-position: center center;
+
+				&:nth-of-type(1) { bottom: $episode-step*0; }
+				&:nth-of-type(2) { bottom: $episode-step*1; }
+				&:nth-of-type(3) { bottom: $episode-step*2 }
+				&:nth-of-type(4) { bottom: $episode-step*3 }
+				&:nth-of-type(5) { bottom: $episode-step*4 }
+				&:nth-of-type(6) { bottom: $episode-step*5 }
+				&:nth-of-type(7) { bottom: $episode-step*6 }
+				&:nth-of-type(8) { bottom: $episode-step*7 }
+				&:nth-of-type(9) { bottom: $episode-step*8 }
+				&:nth-of-type(10) { bottom: $episode-step*9 }
+			}
+		}
+
+		.desc {
+			margin-top: 15px;
+		}
+	}
+
+	.episodes-slider {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 30px;
+		width: 995px;
+		float: right;
+
+		.top-desc {
+			margin: 0 0 20px 3px;
+			font-size: 14px;
+
+			span {
+				margin: 0 3px;
+			}
+		}
+
+		.episodes-line {
+			position: relative;
+			border-top: 5px solid #50baca;
+			margin: 22px 0 0 3px;
+			height: 50px;
+
+			.episode-info {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 120px;
+				height: 50px;
+				text-align: center;
+				font-size: 14px;
+				transition: left .1s linear;
+
+				&:before {
+					content: "";
+					position: absolute;
+					top: -13px;
+					left: 50%;
+					margin-left: -10px;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 10px 10px 10px;
+					border-color: transparent transparent #50baca transparent;
+				}
+
+				.title {
+					font-weight: 500;
+					margin-top: 15px;
+				}
+			}
+		}
+
+		.photos {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+
+			li {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				background-size: cover;
+				background-position: center center;
+				height: 100px;
+				width: 4%;
+
+				&.past-episode {
+					opacity: .5;
+
+					&.active {
+						width: 12%;
+						opacity: 1;
+						cursor: pointer;
+
+						&:after {
+							content: "";
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							margin-top: -22px;
+							margin-left: -22px;
+							width: 44px;
+							height: 44px;
+							background-image: url(../images/about/plus.png);
+							background-size: 100% auto;
+						}
+					}
+				}
+
+				&.future-episode {
+					background: #dfdcd7;
+				}
+
+				&:before {
+					content: "";
+					position: absolute;
+					height: 100%;
+					width: 3px;
+					background: #fff;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+body.about {
+	.documents-ul {
+		width: 500px;
+	}
+}
+
+.overlay {
+	.slider-controls {
+		height: 70px;
+		line-height: 70px;
+		bottom: 0;
+		background: #5e5340;
+
+		.numbers-cont {
+			line-height: normal;
+			vertical-align: middle;
+		}
+	}
 }
