@@ -11,13 +11,35 @@ a {
 	text-decoration: none;
 	color: inherit;
 	transition: color .5s $default-ease;
+
+  &:hover {
+    color: #3db8cc;
+  }
+}
+
+p {
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .brd-link {
   border-bottom: 1px solid;
+}
+
+.blue-link {
+  color: #3db8cc;
+  font-weight: 500;
+  border-bottom: 1px solid;
 
   &:hover {
-    color: #34b8ce;
+    color: #439ead;
+  }
+}
+
+.phone-link {
+  &:hover {
+    color: inherit;
   }
 }
 
@@ -52,6 +74,27 @@ a {
     span {
       color: #aca599;
       margin-left: .1em;
+    }
+  }
+}
+
+.us-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    margin-top: 10px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: -25px;
+      height: 1px;
+      width: 16px;
+      top: .8em;
+      background: rgb(94, 83, 62);
     }
   }
 }

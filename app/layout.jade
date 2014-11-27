@@ -37,13 +37,13 @@ html.no-js
               li.nav-li
                 a(href="layouts.html" class="#{bodyClass=='layouts' ? 'active' : ''}") Планировки
               li.nav-li
-                a(href="#") Ипотека
+                a(href="mortgage.html" class="#{bodyClass=='mortgage' ? 'active' : ''}") Ипотека
               li.nav-li
-                a(href="#") Застройщик
+                a(href="company.html" class="#{bodyClass=='company' ? 'active' : ''}") Застройщик
               li.nav-li
                 a(href="news.html" class="#{bodyClass=='news' ? 'active' : ''}") Новости
               li.nav-li
-                a(href="#") Контакты
+                a(href="contacts.html" class="#{bodyClass=='contacts' ? 'active' : ''}") Контакты
 
       block content
 
@@ -51,15 +51,20 @@ html.no-js
         .wrapper
           span © Группа компаний «Стройковъ», 2014
           a(href="#").brd-link Правовые документы
-          span.fl-r Разработано агентством <a href="#" class="brd-link">ГРАФЕМА</a>.
+          span.fl-r Разработано агентством <a href="#" class="brd-link">ГРАФЕМА</a>
 
       // build:js(.) scripts/vendor.js
       // bower:js
       script(src='bower_components/jquery/dist/jquery.js')
       script(src='bower_components/fotorama/fotorama.js')
+      script(src='bower_components/jquery-ui/jquery-ui.js')
       // endbower
       // endbuild
+
+      block scripts
 
       // build:js({app,.tmp}) scripts/main.js
       script(src="scripts/main.js")
       // endbuild
+
+      

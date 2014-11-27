@@ -74,27 +74,6 @@
 	font-size: 16px;
 	color: rgb(94, 83, 62);
 	line-height: 1.6;
-
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-
-		li {
-			position: relative;
-			margin-top: 10px;
-
-			&:before {
-				content: "";
-				position: absolute;
-				left: -25px;
-				height: 1px;
-				width: 16px;
-				top: .8em;
-				background: rgb(94, 83, 62);
-			}
-		}
-	}
 }
 
 .benefits {

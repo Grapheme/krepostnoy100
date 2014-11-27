@@ -1,0 +1,36 @@
+.contacts-container {
+	margin-top: 40px;
+
+	.contact-blocks {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		.contact-block {
+			display: inline-block;
+			vertical-align: top;
+			width: 480px;
+			margin-left: 20px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			.title {
+				font-size: 20px;
+				line-height: 1.2;
+				text-transform: uppercase;
+				font-weight: 300;
+			}
+
+			.text {
+				margin-top: 35px;
+			}
+		}
+	}
+}
+
+.contacts-map {
+	margin-top: 95px;
+	height: 465px;
+}

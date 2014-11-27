@@ -1,0 +1,33 @@
+.company-about {
+	margin: 40px auto 120px;
+	font-size: 14px;
+	line-height: 1.4;
+
+	.desc {
+		padding-right: 100px;
+	}
+
+	.bank {
+		.title {
+			font-size: 20px;
+			line-height: 1.2;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+
+		.text {
+			margin-top: 15px;
+		}
+	}
+
+	.company-link {
+		margin-top: 35px;
+		display: inline-block;
+		vertical-align: top;
+		width: 180px;
+		height: 56px;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-image: url(../images/includes/company-logo.jpg);
+	}
+}

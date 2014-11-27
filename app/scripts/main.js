@@ -299,6 +299,27 @@ App.layouts = function() {
 	Help.tabs();
 }
 
+App.contacts_map = function() {
+	var center_point = new google.maps.LatLng(47.228756, 39.735608);
+	function initialize() {
+		var mapOptions = {
+			center: center_point,
+			zoom: 17,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			scrollwheel: false
+		};
+		var map = new google.maps.Map(document.getElementById("contacts_map"), mapOptions);
+		var image = 'images/includes/map_mark.jpg';
+		var beachMarker = new google.maps.Marker({
+			position: center_point,
+			map: map,
+			icon: image
+		});
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+}
+
 $(function(){
 	var body = $('body');
 
@@ -314,6 +335,16 @@ $(function(){
 	}
 	if(body.hasClass('layouts')) {
 		App.layouts();
+	}
+	if(body.hasClass('mortgage')) {
+		$('.js-accordion').accordion({
+			active: false,
+			collapsible: true,
+			heightStyle: "content"
+		});
+	}
+	if(body.hasClass('contacts')) {
+		App.contacts_map();
 	}
 
 	Global.events();

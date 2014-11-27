@@ -1,0 +1,33 @@
+extends ./layout.jade
+
+block vars
+  - var bodyClass = "contacts";
+
+block content
+  .wrapper
+    h1 Контакты
+    .contacts-container
+      ul.contact-blocks
+        li.contact-block
+          .title Отдел продаж
+          .text
+            p Ростов-на-Дону, 16-я линия, 16 б 
+            p Телефон: <a href="tel:+78632955111" class="phone-link">+7 (863) 295-51-11</a>
+            p Факс: <a href="tel:+78632955112" class="phone-link">+7 (863) 295-51-12</a>
+            p
+              a(href="mailto:sales@krepostnoy100.ru").blue-link sales@krepostnoy100.ru
+        li.contact-block
+          .title КЛИЕНТСКИЙ СЕРВИС
+          .text
+            p Ростов-на-Дону, 16-я линия, 16 б, 
+            p Телефон: <a href="tel:+78632955110" class="phone-link">+7 (863) 295-51-10</a>
+            p Факс: <a href="tel:+78632955110" class="phone-link">+7 (863) 295-51-10</a>
+            p
+              a(href="mailto:client@krepostnoy100.ru").blue-link client@krepostnoy100.ru
+
+  div(id="contacts_map").contacts-map
+
+block scripts
+  script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA4Q5VgK-858jgeSbJKHbclop_XIJs3lXs&sensor=true")
+
+  

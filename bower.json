@@ -5,6 +5,7 @@
     "jquery": "~1.11.1",
     "modernizr": "~2.8.2",
     "normalize-scss": "~3.0.2",
-    "fotorama": "~4.6.2"
+    "fotorama": "~4.6.2",
+    "jquery-ui": "~1.11.2"
   }
 }

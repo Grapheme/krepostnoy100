@@ -1,0 +1,87 @@
+.mortgage {
+	.desc {
+		font-size: 14px;
+		line-height: 1.6;
+		margin-top: 40px;
+	}
+
+	.mortgage-accordion {
+		margin: 20px 0 110px;
+
+		.title {
+			height: 95px;
+			background-position: left center;
+			background-repeat: no-repeat;
+			border-bottom: 1px solid #aea99e;
+			cursor: pointer;
+			outline: 0 none;
+
+			&.m-sberbank {
+				background-image: url(../images/mortgage/sberbank.png);
+			}
+
+			&.m-centrinvest {
+				background-image: url(../images/mortgage/centrinvest.png);
+			}
+
+			&.m-vtb24 {
+				background-image: url(../images/mortgage/vtb24.png);
+			}
+		}
+
+		.mortgage-table {
+			background: #f7f6f5;
+			border-bottom: 1px solid #aea99e;
+			font-size: 14px;
+			padding: 50px 20px;
+  			line-height: 1.6;
+  			
+  			b {
+  				font-weight: 500;
+  			}
+
+  			a {
+  				border-bottom: 1px solid;
+  			}
+
+			tr {
+				height: 45px;
+			}
+
+			p:first-child {
+				margin-top: 0;
+			}
+
+			td {
+				vertical-align: top;
+				min-height: 45px;
+
+				&:nth-of-type(1) {
+					font-size: 16px;
+					font-weight: 500;
+					width: 285px;
+				}
+			}
+
+			.m-table-blocks {
+				font-size: 0;
+
+				.m-table-block {
+					display: inline-block;
+					vertical-align: top;
+					width: 50%;
+					font-size: 14px;
+					box-sizing: border-box;
+
+					&:first-child {
+						padding-right: 50px;
+					}
+
+					&:last-child {
+						padding-left: 50px;
+					}
+				}
+			}
+		}
+	}
+}
