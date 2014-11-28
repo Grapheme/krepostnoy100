@@ -19,10 +19,16 @@
 		text-align: center;
 		color: #fff;
 		width: 100%;
+		font-size: 0;
 
 		.c-arrow {
 			display: inline-block;
-			vertical-align: top;
+			vertical-align: middle;
+			text-align: center;
+			width: 29px;
+			height: 33px;
+			line-height: 37px;
+			font-size: 25px;
 		}
 
 		.numbers-cont {

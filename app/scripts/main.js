@@ -128,6 +128,8 @@ App.uSlider = function() {
 		control.init = function() {
 			var parent = this;
 			parent.number_cont.html('');
+			parent.number_cont.before('<a class="c-arrow c-left"><i class="icon icon-arrow-left"></i></a>');
+			parent.number_cont.after('<a class="c-arrow c-right"><i class="icon icon-arrow-right"></i></a>');
 			for(var i = 1; i <= fotorama_api.size; i++) {
 				parent.amount++;
 				parent.number_cont.append('<li>' + i);
@@ -138,6 +140,15 @@ App.uSlider = function() {
 				parent.number_parent.css('width', new_width+1);
 			}
 			control.goto(fotorama_api.activeIndex);
+
+			self.find('.c-arrow').on('click', function(){
+				var cid = fotorama_api.activeIndex;
+				if($(this).hasClass('c-left')) {
+					fotorama_api.show(cid - 1);
+				} else {
+					fotorama_api.show(cid + 1);
+				}
+			});
 		}
 		control.goto = function(id) {
 			var parent = this;
@@ -160,19 +171,11 @@ App.uSlider = function() {
 		fotorama.init();
 		control.init();
 
-		control.arrows.on('click', function(){
-			var cid = fotorama_api.activeIndex;
-			if($(this).hasClass('c-left')) {
-				fotorama_api.show(cid - 1);
-			} else {
-				fotorama_api.show(cid + 1);
-			}
+		fotorama_block.on('fotorama:show', function (e, fotorama, extra) {
+		    control.goto(fotorama_api.activeIndex);
 		});
 		control.number_cont.on('click', 'li', function(){
 			fotorama_api.show($(this).index());
-		});
-		fotorama_block.on('fotorama:show', function (e, fotorama, extra) {
-		    control.goto(fotorama_api.activeIndex);
 		});
 
 		return fotorama_api;

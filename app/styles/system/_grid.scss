@@ -1,14 +1,19 @@
 .wrapper, .container {
 	position: relative;
-	max-width: 1280px;
+	max-width: 1290px;
 	min-width: 1024px;
 	margin: 0 auto;
 	width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0 10px;
 }
 
 .wrapper {
-	padding: 0 10px;
-	box-sizing: border-box;
+	padding: 0 20px;
+	
 }
 
 .grid_1,

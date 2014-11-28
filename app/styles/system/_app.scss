@@ -53,6 +53,7 @@ body {
 				right: 0;
 				bottom: 0;
 				background: #fff;
+				transition: background .5s $default-ease;
 			}
 
 			&:before {
@@ -61,6 +62,12 @@ body {
 
 			&:after {
 				transform: rotate(45deg);
+			}
+		}
+
+		&:hover {
+			span:before, span:after {
+				background: #3db8cc;
 			}
 		}
 	}
