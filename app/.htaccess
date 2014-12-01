@@ -1,0 +1,10 @@
+AddDefaultCharset utf-8
+Options +FollowSymLinks
+Options -Indexes
+DirectoryIndex index.html
+php_flag register_globals on
+php_value upload_max_filesize 10M
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(index|about|location|layouts|mortgage|company|news|contacts)$ /$1.html
+ErrorDocument 404 /404.html/

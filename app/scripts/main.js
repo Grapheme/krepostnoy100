@@ -392,6 +392,9 @@ $(function(){
 	if(body.hasClass('about')) {
 		App.uSlider().init();
 		App.eSlider();
+		$('.floor-item').click(function(){
+			location.href = 'layouts';
+		});
 	}
 	if(body.hasClass('location')) {
 		App.uSlider().init();
