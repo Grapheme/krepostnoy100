@@ -20,7 +20,7 @@ block content
           //- a.c-arrow.c-right <i class="icon icon-arrow-right"></i>
         .js-us-slider
           each i in [1,2,3,4,5,6,7,8,9,10,11,12]
-            img(alt="" src="images/sliders/facades/#{i}.jpg")
+            img(alt="" src="images/slider_facades/#{i}.jpg")
       .clearfix
 
   .us-block
@@ -28,7 +28,7 @@ block content
       .us-title Приемущества дома
       ul.benefits
         li
-          div(style="background-image: url(../images/benefits/panel.svg);").benefit-icon
+          div(style="background-image: url(images/benefits/panel.svg);").benefit-icon
           .title Технологии
           .text.
             Качественная отделка подъездов.
@@ -36,12 +36,12 @@ block content
             Многоярусный и наземный паркинги для жильцов комплекса с возможностью 
         
         li
-          div(style="background-image: url(../images/benefits/shar.svg);").benefit-icon
+          div(style="background-image: url(images/benefits/shar.svg);").benefit-icon
           .title МЕСТОПОЛОЖЕНИЕ
           .text.
             Пешеходная улица, развитая инфраструктура, отсутствие загруженных транспортных магистралей – вот главное в месторасположении нового жилого комплекса. Все необходимое находится в радиусе 500м. Это позволит вам больше времени посвятить семье, отдыху, друзьям. 
         li
-          div(style="background-image: url(../images/benefits/kapitel.svg);").benefit-icon
+          div(style="background-image: url(images/benefits/kapitel.svg);").benefit-icon
           .title КАЧЕСТВЕННАЯ ОТДЕЛКА
           .text.
             Качественная отделка подъездов.
@@ -50,7 +50,7 @@ block content
             Многоярусный и наземный паркинги для жильцов комплекса с возможностью. 
         
         li
-          div(style="background-image: url(../images/benefits/car.svg);").benefit-icon
+          div(style="background-image: url(images/benefits/car.svg);").benefit-icon
           .title ПАРКОВКА
           .text.
             Каждый желающий может купить машиноместо в подземном паркинге. Все въезды и выезды будут осуществляются по пропускам, что послужит гарантией целостности и сохранности вашего автомобиля.
@@ -77,7 +77,7 @@ block content
           //- a.c-arrow.c-right <i class="icon icon-arrow-right"></i>
         .js-us-slider
           each i in [1,2,3,4,5,6]
-            img(alt="" src="images/sliders/structure/#{i}.jpg")
+            img(alt="" src="images/slider_structure/#{i}.jpg")
       .clearfix
 
   .us-block
@@ -121,32 +121,32 @@ block content
           //- a.c-arrow.c-right <i class="icon icon-arrow-right"></i>
         .js-us-slider
           each i in [1,2,3,4,5,6,7,8]
-            img(alt="" src="images/sliders/hall/#{i}.jpg")
+            img(alt="" src="images/slider_hall/#{i}.jpg")
       .clearfix
 
-  .us-block
+  div(id="documents").us-block
     .container
       .grid_2
         .us-title Документация
         ul.documents-ul
           li
-            a(href="uploads/docs_1.jpg") Разрешение на строиcтельство.
-            span JPG, 659 KB
+            a(href="uploads/docs_1.jpg") Разрешение на строиcтельство
+            span  JPG, 260 KB
           li
-            a(href="uploads/docs_2.jpg") Свидетельство о праве на земельный участок.
-            span JPG, 659 KB
+            a(href="uploads/docs_2.jpg") Свидетельство о праве на земельный участок
+            span  JPG, 708 KB
           li
-            a(href="uploads/docs_3.pdf") Проектная декларация.
-            span PDF, 115 КВ
+            a(href="uploads/docs_3.pdf") Проектная декларация
+            span  PDF, 3.9 MВ
           li
-            a(href="uploads/docs_4.pdf") Договор долевого участия (образец).
-            span PDF, 110 KB
+            a(href="uploads/docs_4.pdf") Договор долевого участия (образец)
+            span  PDF, 138 KB
           li
-            a(href="uploads/docs_5.jpg") Свидетельство о государственной регистрации юридического лица.
-            span JPG, 81 KB
+            a(href="uploads/docs_5.jpg") Свидетельство о государственной регистрации юридического лица
+            span  JPG, 364 KB
           li
-            a(href="uploads/docs_6.pdf") Аудиторское заключение.
-            span JPG, 81 KB
+            a(href="uploads/docs_6.pdf") Аудиторское заключение
+            span  PDF, 5.1 MB
 
       .grid_2
         .building-block
@@ -158,12 +158,12 @@ block content
             img(src="images/about/building.svg")
             ul.floors-blocks
               each i in [10,9,8,7,6,5,4,3,2]
-                li(class="#{i==9 ? 'active' : ''}").floor-item
+                li(class="#{i==9 || i==10 ? 'active' : ''}").floor-item
                   .left-part
                   .right-part
           ul.saled
             each i in [10,9,8,7,6,5,4,3,2]
-              li #{i==9 ? 'продан!' : ''}&nbsp;
+              li #{i==9 || i==10 ? 'продан!' : ''}&nbsp;
 
     .clearfix
 

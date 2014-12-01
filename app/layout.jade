@@ -27,31 +27,31 @@ html.no-js
     body(class="#{bodyClass}")
       header(class="header#{headerClass}")
         .wrapper  
-          a(href="index.html").logo
+          a(href="./").logo
           nav.main-nav
             ul.nav-ul
               li.nav-li
-                a(href="about.html" class="#{bodyClass=='about' ? 'active' : ''}") О доме
+                a(href="about" class="#{bodyClass=='about' ? 'active' : ''}") О доме
               li.nav-li
-                a(href="location.html" class="#{bodyClass=='location' ? 'active' : ''}") Расположение
+                a(href="location" class="#{bodyClass=='location' ? 'active' : ''}") Расположение
               li.nav-li
-                a(href="layouts.html" class="#{bodyClass=='layouts' ? 'active' : ''}") Планировки
+                a(href="layouts" class="#{bodyClass=='layouts' ? 'active' : ''}") Планировки
               li.nav-li
-                a(href="mortgage.html" class="#{bodyClass=='mortgage' ? 'active' : ''}") Ипотека
+                a(href="mortgage" class="#{bodyClass=='mortgage' ? 'active' : ''}") Ипотека
               li.nav-li
-                a(href="company.html" class="#{bodyClass=='company' ? 'active' : ''}") Застройщик
+                a(href="company" class="#{bodyClass=='company' ? 'active' : ''}") Застройщик
               li.nav-li
-                a(href="news.html" class="#{bodyClass=='news' ? 'active' : ''}") Новости
+                a(href="news" class="#{bodyClass=='news' ? 'active' : ''}") Новости
               li.nav-li
-                a(href="contacts.html" class="#{bodyClass=='contacts' ? 'active' : ''}") Контакты
+                a(href="contacts" class="#{bodyClass=='contacts' ? 'active' : ''}") Контакты
 
       block content
 
       footer.footer
         .wrapper
           span © Группа компаний «Стройковъ», 2014
-          a(href="#").brd-link Правовые документы
-          span.fl-r Разработано агентством <a href="#" class="brd-link">ГРАФЕМА</a>
+          a(href="about#documents").brd-link Правовые документы
+          span.fl-r Сделано в <a href="" target="_blank" class="brd-link">ГРАФЕМА</a>
 
       // build:js(.) scripts/vendor.js
       // bower:js

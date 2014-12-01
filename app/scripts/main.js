@@ -1,5 +1,11 @@
 'use strict';
 
+var Dictionary = {
+	map: {
+		center: [47.228756, 39.735608]
+	}
+}
+
 var App = {};
 var Help = {};
 var Global = {};
@@ -127,21 +133,35 @@ App.uSlider = function() {
 		};
 		control.init = function() {
 			var parent = this;
-			parent.number_cont.html('');
-			parent.number_cont.before('<a class="c-arrow c-left"><i class="icon icon-arrow-left"></i></a>');
-			parent.number_cont.after('<a class="c-arrow c-right"><i class="icon icon-arrow-right"></i></a>');
+			self.find('.js-controls').html(	'<a class="c-arrow c-left"><i class="icon icon-arrow-left"></i></a>\
+						<div class="numbers-cont">\
+              				<ul class="numbers"></ul>\
+              			</div>\
+              			<a class="c-arrow c-right"><i class="icon icon-arrow-right"></i></a>');
+			parent.number_cont = self.find('.numbers');
+			parent.number_parent = self.find('.numbers-cont');
+			parent.arrows = self.find('.c-arrow');
+
 			for(var i = 1; i <= fotorama_api.size; i++) {
 				parent.amount++;
 				parent.number_cont.append('<li>' + i);
 			}
-			if(!(parent.amount < parent.visible)) {
-				parent.number_width = parent.number_cont.find('li').eq(0).outerWidth();
-				var new_width = parent.number_width * parent.visible;
-				parent.number_parent.css('width', new_width+1);
-			}
-			control.goto(fotorama_api.activeIndex);
 
-			self.find('.c-arrow').on('click', function(){
+			if(fotorama_api.size < 2) {
+				parent.arrows.hide();
+			}
+
+			setTimeout(function(){
+				if(!(parent.amount < parent.visible)) {
+					parent.number_width = parent.number_cont.find('li').eq(0).outerWidth();
+					var new_width = parent.number_width * parent.visible;
+					parent.number_parent.css('width', new_width+1);
+					console.log(new_width);
+				}
+				control.goto(fotorama_api.activeIndex);
+			}, 5);
+
+			parent.arrows.on('click', function(){
 				var cid = fotorama_api.activeIndex;
 				if($(this).hasClass('c-left')) {
 					fotorama_api.show(cid - 1);
@@ -195,39 +215,7 @@ App.eSlider = function() {
 			image: "images/tmp/episode-thumb.jpg",
 			date: "18.09.2014",
 			percents: 5,
-			photos: [	{img: 'images/tmp/popup1.jpg'},
-						{img: 'images/tmp/popup2.jpg'},
-						{img: 'images/tmp/popup3.jpg'},
-						{img: 'images/tmp/popup4.jpg'},
-					]
-		},
-		{
-			image: "images/tmp/episode-thumb.jpg",
-			date: "18.09.2014",
-			percents: 10,
-			photos: [	{img: 'images/tmp/popup1.jpg'}
-					]
-		},
-		{
-			image: "images/tmp/episode-thumb.jpg",
-			date: "18.09.2014",
-			percents: 15,
-			photos: [	{img: 'images/tmp/popup1.jpg'}
-					]
-		},
-		{
-			image: "images/tmp/episode-thumb.jpg",
-			date: "18.09.2014",
-			percents: 25,
-			photos: [	{img: 'images/tmp/popup1.jpg'}
-					]
-		},
-		{
-			image: "images/tmp/episode-thumb.jpg",
-			date: "18.09.2014",
-			percents: 30,
-			photos: [	{img: 'images/tmp/popup1.jpg'}
-					]
+			photos: []
 		}
 	];
 
@@ -239,6 +227,9 @@ App.eSlider = function() {
 		for(var i = 0; i < sect_amount; i++) {
 			sections_cont.find('li').eq(i).show();
 		}
+		if(sect_amount < 10) {
+			sections_cont.find('li').eq(0).show();
+		}
 	}
 
 	this.setInfo = function(id) {
@@ -247,6 +238,11 @@ App.eSlider = function() {
 
 		slide_info.find('.title').text(date);
 		slide_info.find('.text span').text(photos_amount);
+		if(photos_amount == 0) {
+			slide_info.find('.text').hide();
+		} else {
+			slide_info.find('.text').show();
+		}
 	}
 
 	this.setActive = function(id) {
@@ -271,6 +267,7 @@ App.eSlider = function() {
 			self.setActive($(this).index());
 		});
 		past_block.on('click', function(){
+			if($(this).hasClass('without-photos')) return;
 			var id = $(this).index();
 			Help.popup.open('episode-photos');
 			fapi = App.uSlider().setFotorama($('.ajax-fotorama'), episodes[id].photos);
@@ -285,7 +282,11 @@ App.eSlider = function() {
 		for(var i = 0; i < 23; i++) {
 			var this_e = episodes[i];
 			if(this_e) {
-				photos_cont.append('<li class="past-episode" style="background-image: url(' + this_e.image + ');">');
+				var link_style = '';
+				if(this_e.photos.length == 0) {
+					link_style = ' without-photos';
+				}
+				photos_cont.append('<li class="past-episode' + link_style + '" style="background-image: url(' + this_e.image + ');">');
 			} else {
 				photos_cont.append('<li class="future-episode">');
 			}
@@ -303,7 +304,8 @@ App.layouts = function() {
 }
 
 App.contacts_map = function() {
-	var center_point = new google.maps.LatLng(47.228756, 39.735608);
+	var Dcenter = Dictionary.map.center;
+	var center_point = new google.maps.LatLng(Dcenter[0], Dcenter[1]);
 	function initialize() {
 		var mapOptions = {
 			center: center_point,
@@ -323,6 +325,64 @@ App.contacts_map = function() {
 	google.maps.event.addDomListener(window, 'load', initialize);
 }
 
+App.location_map = function() {
+	var Dcenter = Dictionary.map.center;
+	var center_point = new google.maps.LatLng(Dcenter[0], Dcenter[1]);
+	function initialize() {
+		var mapOptions = {
+			center: center_point,
+			zoom: 16,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			scrollwheel: false
+		};
+		var map = new google.maps.Map(document.getElementById("location_map"), mapOptions);
+		var image = 'images/location/map_house.png';
+		var beachMarker = new google.maps.Marker({
+			position: center_point,
+			map: map,
+			icon: image
+		});
+
+		var musMarker = new google.maps.Marker({
+			position: new google.maps.LatLng(47.224311, 39.726323),
+			map: map,
+			icon: 'images/location/loc_mus.jpg'
+		});
+
+		var fitnesMarker = new google.maps.Marker({
+			position: new google.maps.LatLng(47.226326, 39.731505),
+			map: map,
+			icon: 'images/location/loc_fitnes.jpg'
+		});
+
+		var restMarker = new google.maps.Marker({
+			position: new google.maps.LatLng(47.230803, 39.737427),
+			map: map,
+			icon: 'images/location/loc_rest.jpg'
+		});
+
+		var parkMarker = new google.maps.Marker({
+			position: new google.maps.LatLng(47.230486, 39.743575),
+			map: map,
+			icon: 'images/location/loc_park.jpg'
+		});
+
+		var shopMarker = new google.maps.Marker({
+			position: new google.maps.LatLng(47.231386, 39.741858),
+			map: map,
+			icon: 'images/location/loc_shop.jpg'
+		});
+
+		var childMarker = new google.maps.Marker({
+			position: new google.maps.LatLng(47.230664, 39.741440),
+			map: map,
+			icon: 'images/location/loc_child.jpg'
+		});
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+}
+
 $(function(){
 	var body = $('body');
 
@@ -335,6 +395,7 @@ $(function(){
 	}
 	if(body.hasClass('location')) {
 		App.uSlider().init();
+		App.location_map();
 	}
 	if(body.hasClass('layouts')) {
 		App.layouts();

@@ -20,16 +20,16 @@
   </head>
   <body class="location">
     <header class="header">
-      <div class="wrapper"> <a href="index.html" class="logo"></a>
+      <div class="wrapper"> <a href="./" class="logo"></a>
         <nav class="main-nav">
           <ul class="nav-ul">
-            <li class="nav-li"><a href="about.html">О доме</a></li>
-            <li class="nav-li"><a href="location.html" class="active">Расположение</a></li>
-            <li class="nav-li"><a href="layouts.html">Планировки</a></li>
-            <li class="nav-li"><a href="mortgage.html">Ипотека</a></li>
-            <li class="nav-li"><a href="company.html">Застройщик</a></li>
-            <li class="nav-li"><a href="news.html">Новости</a></li>
-            <li class="nav-li"><a href="contacts.html">Контакты</a></li>
+            <li class="nav-li"><a href="about">О доме</a></li>
+            <li class="nav-li"><a href="location" class="active">Расположение</a></li>
+            <li class="nav-li"><a href="layouts">Планировки</a></li>
+            <li class="nav-li"><a href="mortgage">Ипотека</a></li>
+            <li class="nav-li"><a href="company">Застройщик</a></li>
+            <li class="nav-li"><a href="news">Новости</a></li>
+            <li class="nav-li"><a href="contacts">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -48,7 +48,7 @@
               <ul class="numbers"></ul>
             </div><a class="c-arrow c-right">></a>
           </div>
-          <div class="js-us-slider"><img alt="" src="images/sliders/location/1.jpg"><img alt="" src="images/sliders/location/2.jpg"><img alt="" src="images/sliders/location/3.jpg"><img alt="" src="images/sliders/location/4.jpg"><img alt="" src="images/sliders/location/5.jpg"><img alt="" src="images/sliders/location/6.jpg"><img alt="" src="images/sliders/location/7.jpg"><img alt="" src="images/sliders/location/8.jpg"><img alt="" src="images/sliders/location/9.jpg">
+          <div class="js-us-slider"><img alt="" src="images/slider_location/1.jpg"><img alt="" src="images/slider_location/2.jpg"><img alt="" src="images/slider_location/3.jpg"><img alt="" src="images/slider_location/4.jpg"><img alt="" src="images/slider_location/5.jpg"><img alt="" src="images/slider_location/6.jpg"><img alt="" src="images/slider_location/7.jpg"><img alt="" src="images/slider_location/8.jpg"><img alt="" src="images/slider_location/9.jpg">
           </div>
         </div>
         <div class="clearfix"></div>
@@ -70,9 +70,9 @@
         <div class="clearfix">    </div>
       </div>
     </div>
-    <div class="map-benefits"></div>
+    <div id="location_map" class="location-map"></div>
     <footer class="footer">
-      <div class="wrapper"><span>© Группа компаний «Стройковъ», 2014</span><a href="#" class="brd-link">Правовые документы</a><span class="fl-r">Разработано агентством <a href="#" class="brd-link">ГРАФЕМА</a></span></div>
+      <div class="wrapper"><span>© Группа компаний «Стройковъ», 2014</span><a href="about#documents" class="brd-link">Правовые документы</a><span class="fl-r">Сделано в <a href="" target="_blank" class="brd-link">ГРАФЕМА</a></span></div>
     </footer>
     <!-- build:js(.) scripts/vendor.js-->
     <!-- bower:js-->
@@ -81,6 +81,7 @@
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <!-- endbower-->
     <!-- endbuild-->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA4Q5VgK-858jgeSbJKHbclop_XIJs3lXs&amp;sensor=true"></script>
     <!-- build:js({app,.tmp}) scripts/main.js-->
     <script src="scripts/main.js"></script>
     <!-- endbuild-->

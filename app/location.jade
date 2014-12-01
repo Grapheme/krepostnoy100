@@ -19,7 +19,7 @@ block content
           a.c-arrow.c-right >
         .js-us-slider
           each i in [1,2,3,4,5,6,7,8,9]
-            img(alt="" src="images/sliders/location/#{i}.jpg")
+            img(alt="" src="images/slider_location/#{i}.jpg")
       .clearfix
 
   .us-block
@@ -35,6 +35,9 @@ block content
           li.ben-shop <span>Покупки </span>
       .clearfix     
 
-  .map-benefits
+  div(id="location_map").location-map
+
+block scripts
+  script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA4Q5VgK-858jgeSbJKHbclop_XIJs3lXs&sensor=true")
           
   

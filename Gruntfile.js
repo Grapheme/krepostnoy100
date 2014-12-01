@@ -332,7 +332,7 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>',
           src: [
             '*.{ico,png,txt}',
-            'images/{,*/}*.webp',
+            'images/*.*',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*',
             'uploads/{,*/}*.*'
@@ -467,7 +467,8 @@ module.exports = function (grunt) {
     'copy:dist',
     'modernizr',
     'rev',
-    'usemin'
+    'usemin',
+    'imagemin'
     //'htmlmin'
   ]);
 

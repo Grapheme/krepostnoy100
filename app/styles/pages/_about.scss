@@ -368,6 +368,14 @@ $episode-step: 13px;
 							background-image: url(../images/about/plus.png);
 							background-size: 100% auto;
 						}
+
+						&.without-photos {
+							cursor: default;
+
+							&:after {
+								display: none;
+							}
+						}
 					}
 				}
 

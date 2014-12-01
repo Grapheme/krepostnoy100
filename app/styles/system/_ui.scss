@@ -15,6 +15,11 @@ a {
   &:hover {
     color: #3db8cc;
   }
+
+  &.disabled {
+    color: #aca599 !important;
+    cursor: default;
+  }
 }
 
 p {
@@ -84,7 +89,7 @@ p {
 
     span {
       color: #aca599;
-      margin-left: .1em;
+      margin-left: 10px;
     }
   }
 }
@@ -101,9 +106,9 @@ p {
     &:before {
       content: "";
       position: absolute;
-      left: -25px;
+      left: -22px;
       height: 1px;
-      width: 16px;
+      width: 13px;
       top: .8em;
       background: rgb(94, 83, 62);
     }
