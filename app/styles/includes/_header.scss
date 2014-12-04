@@ -4,6 +4,7 @@
 	height: $menu-height;
 	line-height: $menu-height;
 	background: #5e5341;
+	min-width: $min-width;
 
 	&.main-header {
 		background: #43baca;

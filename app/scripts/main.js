@@ -67,15 +67,15 @@ App.mainPage = function() {
 	function init() {
 		var fotorama_sets = {
 			loop: true,
-			width: '100%',
-			height: '100%',
 			autoplay: 5000,
 			fit: 'cover',
 			nav: false,
 			arrows: false,
 			swipe: false,
 			click: false,
-			transition: 'dissolve'
+			transition: 'dissolve',
+			width: '100%',
+			height: '100%'
 		};
 		$('.js-indexFotorama').fotorama(fotorama_sets);
 	}
@@ -405,8 +405,8 @@ $(function(){
 	}
 	if(body.hasClass('mortgage')) {
 		$('.js-accordion').accordion({
-			active: false,
-			collapsible: true,
+			/*active: false,
+			collapsible: true,*/
 			heightStyle: "content"
 		});
 	}

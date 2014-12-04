@@ -4,6 +4,12 @@
 	}
 }
 
+@media screen and (max-width: 1110px) {
+	.nav-news {
+		display: none !important;
+	}
+}
+
 @media screen and (max-width: 1070px) {
 	.episodes .episodes-slider {
 		width: 800px;
