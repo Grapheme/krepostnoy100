@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Клубный дом «Крепостной 100»</title>
     <meta name="description" content="Современный комфортабельный жилой дом в центре Ростова">
-    <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- build:css(.) styles/vendor.css-->
     <!-- bower:css-->
@@ -19,54 +18,58 @@
     <!-- endbuild-->
   </head>
   <body class="contacts">
-    <header class="header">
-      <div class="wrapper"> <a href="./" class="logo"></a>
-        <nav class="main-nav">
-          <ul class="nav-ul">
-            <li class="nav-li"><a href="about">О доме</a></li>
-            <li class="nav-li"><a href="location">Расположение</a></li>
-            <li class="nav-li"><a href="layouts">Планировки</a></li>
-            <li class="nav-li"><a href="mortgage">Ипотека</a></li>
-            <li class="nav-li"><a href="company">Застройщик</a></li>
-            <li class="nav-li nav-news"><a href="news">Новости</a></li>
-            <li class="nav-li"><a href="about#documents">Документы</a></li>
-            <li class="nav-li"><a href="contacts" class="active">Контакты</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div class="wrapper">
-      <h1>Контакты</h1>
-      <div class="contacts-container">
-        <ul class="contact-blocks">
-          <li class="contact-block">
-            <div class="title">Адрес</div>
-            <div class="text">
-              <p>344019, Ростов-на-Дону,</p>
-              <p>16-я линия, 16 б, офис 1</p>
-              <p>Телефон: <a href="tel:+78632955110" class="phone-link">+7 (863) 295-51-10</a></p>
-            </div>
-          </li>
-          <li class="contact-block">
-            <div class="title">Отдел продаж</div>
-            <div class="text">
-              <p>Телефон: <a href="tel:+78632955111" class="phone-link">+7 (863) 295-51-11</a></p>
-              <p>Факс: <a href="tel:+78632955112" class="phone-link">+7 (863) 295-51-12</a></p>
-              <p><a href="mailto:sales@krepostnoy100.ru" class="blue-link">sales@krepostnoy100.ru</a></p>
-            </div>
-          </li>
-          <li class="contact-block">
-            <div class="title">КЛИЕНТСКИЙ СЕРВИС</div>
-            <div class="text">
-              <p>Телефон: <a href="tel:+78632955110" class="phone-link">+7 (863) 295-51-10</a></p>
-              <p>Факс: <a href="tel:+78632955110" class="phone-link">+7 (863) 295-51-10</a></p>
-              <p><a href="mailto:client@krepostnoy100.ru" class="blue-link">client@krepostnoy100.ru</a></p>
-            </div>
-          </li>
-        </ul>
+    <div class="sticky-wrapper">
+      <header class="header">
+        <div class="wrapper"> <a href="./" class="logo"></a>
+          <nav class="main-nav">
+            <ul class="nav-ul">
+              <li class="nav-li"><a href="about">О доме</a></li>
+              <li class="nav-li"><a href="location">Расположение</a></li>
+              <li class="nav-li"><a href="layouts">Планировки</a></li>
+              <li class="nav-li"><a href="mortgage">Ипотека</a></li>
+              <li class="nav-li"><a href="company">Застройщик</a></li>
+              <li class="nav-li nav-news"><a href="news">Новости</a></li>
+              <li class="nav-li"><a href="about#documents">Документы</a></li>
+              <li class="nav-li"><a href="contacts" class="active">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="content-wrapper">
+        <div class="wrapper">
+          <h1>Контакты</h1>
+          <div class="contacts-container">
+            <ul class="contact-blocks">
+              <li class="contact-block">
+                <div class="title">Адрес</div>
+                <div class="text">
+                  <p>344019, Ростов-на-Дону,</p>
+                  <p>16-я линия, 16 б, офис 1</p>
+                  <p>Телефон: <a href="tel:+78632955110" class="phone-link">+7 (863) 295-51-10</a></p>
+                </div>
+              </li>
+              <li class="contact-block">
+                <div class="title">Отдел продаж</div>
+                <div class="text">
+                  <p>Телефон: <a href="tel:+78632955111" class="phone-link">+7 (863) 295-51-11</a></p>
+                  <p>Факс: <a href="tel:+78632955112" class="phone-link">+7 (863) 295-51-12</a></p>
+                  <p><a href="mailto:sales@krepostnoy100.ru" class="blue-link">sales@krepostnoy100.ru</a></p>
+                </div>
+              </li>
+              <li class="contact-block">
+                <div class="title">КЛИЕНТСКИЙ СЕРВИС</div>
+                <div class="text">
+                  <p>Телефон: <a href="tel:+78632955110" class="phone-link">+7 (863) 295-51-10</a></p>
+                  <p>Факс: <a href="tel:+78632955110" class="phone-link">+7 (863) 295-51-10</a></p>
+                  <p><a href="mailto:client@krepostnoy100.ru" class="blue-link">client@krepostnoy100.ru</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="contacts_map" class="contacts-map"></div>
       </div>
     </div>
-    <div id="contacts_map" class="contacts-map"></div>
     <footer class="footer">
       <div class="wrapper"><span>© ООО «Наш город», 2014</span><a href="about#documents" class="brd-link">Документы</a><span class="fl-r">Сделано в <a href="http://grapheme.ru" target="_blank" class="brd-link">ГРАФЕМА</a></span></div>
     </footer>

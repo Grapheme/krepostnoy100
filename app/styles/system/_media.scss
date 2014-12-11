@@ -4,6 +4,18 @@
 	}
 }
 
+@media screen and (max-width: 1190px) {
+	.layout-left-grid {
+		width: 23% !important;
+	}
+	.layout-about-grid {
+		padding-left: 10px !important;
+	}
+	.layouts-container .layouts-tabs li span {
+		font-size: 12px;
+	}
+}
+
 @media screen and (max-width: 1110px) {
 	.nav-news {
 		display: none !important;

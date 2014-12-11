@@ -10,7 +10,6 @@ html.no-js
         meta(charset="utf-8")
         title #{title}
         meta(name="description" content="Современный комфортабельный жилой дом в центре Ростова")
-        meta(name="viewport" content="width=device-width")
         link(rel="shortcut icon" href="/favicon.ico")
         // build:css(.) styles/vendor.css
         // bower:css
@@ -25,29 +24,30 @@ html.no-js
         // endbuild
 
     body(class="#{bodyClass}")
-      header(class="header#{headerClass}")
-        .wrapper  
-          a(href="./").logo
-          nav.main-nav
-            ul.nav-ul
-              li.nav-li
-                a(href="about" class="#{bodyClass=='about' ? 'active' : ''}") О доме
-              li.nav-li
-                a(href="location" class="#{bodyClass=='location' ? 'active' : ''}") Расположение
-              li.nav-li
-                a(href="layouts" class="#{bodyClass=='layouts' ? 'active' : ''}") Планировки
-              li.nav-li
-                a(href="mortgage" class="#{bodyClass=='mortgage' ? 'active' : ''}") Ипотека
-              li.nav-li
-                a(href="company" class="#{bodyClass=='company' ? 'active' : ''}") Застройщик
-              li.nav-li.nav-news
-                a(href="news" class="#{bodyClass=='news' ? 'active' : ''}") Новости
-              li.nav-li
-                a(href="about#documents") Документы
-              li.nav-li
-                a(href="contacts" class="#{bodyClass=='contacts' ? 'active' : ''}") Контакты
-
-      block content
+      .sticky-wrapper
+        header(class="header#{headerClass}")
+          .wrapper  
+            a(href="./").logo
+            nav.main-nav
+              ul.nav-ul
+                li.nav-li
+                  a(href="about" class="#{bodyClass=='about' ? 'active' : ''}") О доме
+                li.nav-li
+                  a(href="location" class="#{bodyClass=='location' ? 'active' : ''}") Расположение
+                li.nav-li
+                  a(href="layouts" class="#{bodyClass=='layouts' ? 'active' : ''}") Планировки
+                li.nav-li
+                  a(href="mortgage" class="#{bodyClass=='mortgage' ? 'active' : ''}") Ипотека
+                li.nav-li
+                  a(href="company" class="#{bodyClass=='company' ? 'active' : ''}") Застройщик
+                li.nav-li.nav-news
+                  a(href="news" class="#{bodyClass=='news' ? 'active' : ''}") Новости
+                li.nav-li
+                  a(href="about#documents") Документы
+                li.nav-li
+                  a(href="contacts" class="#{bodyClass=='contacts' ? 'active' : ''}") Контакты
+        .content-wrapper
+          block content
 
       footer.footer
         .wrapper

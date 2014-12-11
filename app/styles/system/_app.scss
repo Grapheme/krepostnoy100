@@ -13,6 +13,17 @@ body {
 	color: #5e533e;
 }
 
+html, body, .sticky-wrapper {height: 100%;}
+
+body > .sticky-wrapper {height: auto; min-height: 100%;}
+
+.content-wrapper {padding-bottom: 90px;}
+
+.footer {position: relative;
+	margin-top: -90px;
+	height: 90px;
+	clear:both;}
+
 .overlay {
 	position: fixed;
 	bottom: 0;

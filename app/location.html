@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Клубный дом «Крепостной 100»</title>
     <meta name="description" content="Современный комфортабельный жилой дом в центре Ростова">
-    <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- build:css(.) styles/vendor.css-->
     <!-- bower:css-->
@@ -19,59 +18,63 @@
     <!-- endbuild-->
   </head>
   <body class="location">
-    <header class="header">
-      <div class="wrapper"> <a href="./" class="logo"></a>
-        <nav class="main-nav">
-          <ul class="nav-ul">
-            <li class="nav-li"><a href="about">О доме</a></li>
-            <li class="nav-li"><a href="location" class="active">Расположение</a></li>
-            <li class="nav-li"><a href="layouts">Планировки</a></li>
-            <li class="nav-li"><a href="mortgage">Ипотека</a></li>
-            <li class="nav-li"><a href="company">Застройщик</a></li>
-            <li class="nav-li nav-news"><a href="news">Новости</a></li>
-            <li class="nav-li"><a href="about#documents">Документы</a></li>
-            <li class="nav-li"><a href="contacts">Контакты</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div class="wrapper">
-      <h1>Расположение</h1>
-    </div>
-    <div class="slider-block">
-      <div class="container">
-        <div class="grid_1">
-          <div class="block-text">Пешеходная улица, развитая инфраструктура, отсутствие загруженных транспортных магистралей – вот главное в месторасположении нового жилого комплекса. На территории в радиусе пешеходной доступности находится множество культурных, образовательных, медицинских, административно-офисных учреждений, а так же торгово- развлекательных комплексов, кафе, ресторанов и фитнесс центров.</div>
+    <div class="sticky-wrapper">
+      <header class="header">
+        <div class="wrapper"> <a href="./" class="logo"></a>
+          <nav class="main-nav">
+            <ul class="nav-ul">
+              <li class="nav-li"><a href="about">О доме</a></li>
+              <li class="nav-li"><a href="location" class="active">Расположение</a></li>
+              <li class="nav-li"><a href="layouts">Планировки</a></li>
+              <li class="nav-li"><a href="mortgage">Ипотека</a></li>
+              <li class="nav-li"><a href="company">Застройщик</a></li>
+              <li class="nav-li nav-news"><a href="news">Новости</a></li>
+              <li class="nav-li"><a href="about#documents">Документы</a></li>
+              <li class="nav-li"><a href="contacts">Контакты</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="grid_3 us-slider js-slider-cont">
-          <div class="slider-controls js-controls"><a class="c-arrow c-left"><</a>
-            <div class="numbers-cont">
-              <ul class="numbers"></ul>
-            </div><a class="c-arrow c-right">></a>
+      </header>
+      <div class="content-wrapper">
+        <div class="wrapper">
+          <h1>Расположение</h1>
+        </div>
+        <div class="slider-block">
+          <div class="container">
+            <div class="grid_1">
+              <div class="block-text">Пешеходная улица, развитая инфраструктура, отсутствие загруженных транспортных магистралей – вот главное в месторасположении нового жилого комплекса. На территории в радиусе пешеходной доступности находится множество культурных, образовательных, медицинских, административно-офисных учреждений, а так же торгово- развлекательных комплексов, кафе, ресторанов и фитнесс центров.</div>
+            </div>
+            <div class="grid_3 us-slider js-slider-cont">
+              <div class="slider-controls js-controls"><a class="c-arrow c-left"><</a>
+                <div class="numbers-cont">
+                  <ul class="numbers"></ul>
+                </div><a class="c-arrow c-right">></a>
+              </div>
+              <div class="js-us-slider"><img alt="" src="images/slider_location/1.jpg"><img alt="" src="images/slider_location/2.jpg"><img alt="" src="images/slider_location/3.jpg"><img alt="" src="images/slider_location/4.jpg"><img alt="" src="images/slider_location/5.jpg"><img alt="" src="images/slider_location/6.jpg"><img alt="" src="images/slider_location/7.jpg"><img alt="" src="images/slider_location/8.jpg"><img alt="" src="images/slider_location/9.jpg">
+              </div>
+            </div>
+            <div class="clearfix"></div>
           </div>
-          <div class="js-us-slider"><img alt="" src="images/slider_location/1.jpg"><img alt="" src="images/slider_location/2.jpg"><img alt="" src="images/slider_location/3.jpg"><img alt="" src="images/slider_location/4.jpg"><img alt="" src="images/slider_location/5.jpg"><img alt="" src="images/slider_location/6.jpg"><img alt="" src="images/slider_location/7.jpg"><img alt="" src="images/slider_location/8.jpg"><img alt="" src="images/slider_location/9.jpg">
+        </div>
+        <div class="us-block">
+          <div class="container">
+            <div class="grid_1">&nbsp;</div>
+            <div class="grid_3">
+              <ul class="loc-benefits">
+                <li class="ben-mus"><span>Музеи</span></li>
+                <li class="ben-parks"><span>Парки, Скверы</span></li>
+                <li class="ben-child"><span>Детям</span></li>
+                <li class="ben-fitnes"><span>Фитнес-Клуб</span></li>
+                <li class="ben-rest"><span>Рестораны, кафе</span></li>
+                <li class="ben-shop"><span>Покупки </span></li>
+              </ul>
+            </div>
+            <div class="clearfix">    </div>
           </div>
         </div>
-        <div class="clearfix"></div>
+        <div id="location_map" class="location-map"></div>
       </div>
     </div>
-    <div class="us-block">
-      <div class="container">
-        <div class="grid_1">&nbsp;</div>
-        <div class="grid_3">
-          <ul class="loc-benefits">
-            <li class="ben-mus"><span>Музеи</span></li>
-            <li class="ben-parks"><span>Парки, Скверы</span></li>
-            <li class="ben-child"><span>Детям</span></li>
-            <li class="ben-fitnes"><span>Фитнес-Клуб</span></li>
-            <li class="ben-rest"><span>Рестораны, кафе</span></li>
-            <li class="ben-shop"><span>Покупки </span></li>
-          </ul>
-        </div>
-        <div class="clearfix">    </div>
-      </div>
-    </div>
-    <div id="location_map" class="location-map"></div>
     <footer class="footer">
       <div class="wrapper"><span>© ООО «Наш город», 2014</span><a href="about#documents" class="brd-link">Документы</a><span class="fl-r">Сделано в <a href="http://grapheme.ru" target="_blank" class="brd-link">ГРАФЕМА</a></span></div>
     </footer>
